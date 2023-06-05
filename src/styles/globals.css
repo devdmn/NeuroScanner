@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(
+      270deg,
+      hsla(187, 63%, 36%, 0.9) 0%,
+      hsla(195, 42%, 22%, 0.9) 100%
+    ),
+    url("/bg.jfif")
+      no-repeat;
+  background-size: cover;
+
+  @apply antialiased text-gray-100;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
