@@ -84,4 +84,4 @@ def runModel():
   return {"dementia": dementia, "tumor": "Yes" if tPred > 0.5 else "No"}, 200
 
 # Flask App Run
-# app.run(debug=True)
+# app.run()

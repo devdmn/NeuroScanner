@@ -14,10 +14,10 @@ export default function Home() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (!preview) return;
 
     const formData = new FormData(e.currentTarget);
-    // @ts-ignore 
-    if (!formData.get("image").name) return;
 
     setLoading(true);
     setDementia("");
