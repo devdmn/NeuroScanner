@@ -1,3 +1,3 @@
 ## NeuroScannerr
 
-Sameer write here.
+Final Semester (Bachelor of Technology) Project 
