@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "flask-dev": "pip3 install -r requirements.txt && cd api && flask run",
+    "dep-install": "pip3 install -r requirements.txt && npm install",
+    "flask-dev": "cd api && flask run",
     "next-dev": "next dev",
-    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
+    "dev": "concurrently \"npm run next-dev\" \"npm run flask-dev\"",
     "build": "next build",
-    "start": "next start",
+    "next-start": "next start",
+    "start": "concurrently \"npm run next-start\" \"npm run flask-dev\"",
     "lint": "next lint"
   },
   "dependencies": {
